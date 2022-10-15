@@ -18,6 +18,7 @@ def print_label_using_pydantic(pod_metadata: client.models.V1ObjectMeta):
             value=value
         ))
 
+    print(f"==== {pod_metadata.name}'s labels ===")
     for label in labels:
         print(f"{label.name}: {label.value}")
 
